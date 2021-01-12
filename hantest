@@ -1,0 +1,40 @@
+import java.util.*;
+public class Hang {
+  public static void main(String[] args) {
+      String ar = "stewardesses";
+    
+      int b = ar.length();
+      int counter = 0;
+       
+    Scanner a = new Scanner(System.in);
+       
+    for(int j = b; j > 0; j++){
+    
+          System.out.println("String selected has " + b + " characters."); 
+    
+          System.out.println("Enter a character you think is part of the string.");
+          char q = a.next().charAt(0);
+      if(q == 1){
+          for(int i = 0; i < b-1; i++){
+            if(ar.substring(i, i+1).equals(q)){
+              ar.replace(ar.substring(i, i+1), "");
+              counter++;
+            }
+              if(b > 0 && counter > 1){
+                System.out.println("You guessed correctly!");
+                continue;
+              }
+              
+              else{
+                System.out.println("Oh well. You guessed incorrectly. Try again!");
+                break;
+                }
+             }
+                      
+          }
+      else{System.out.println("Please enter one character.");
+        continue;
+      }
+  }
+}
+}
